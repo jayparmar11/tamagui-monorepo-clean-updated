@@ -1,17 +1,14 @@
 'use client'
 
-import { View } from '@my/ui'
+import { HomeScreen } from 'app/features/home/screen'
+import { Button, Text, View } from '@my/ui'
 
 function AppPage() {
   return (
-    <View className="text-3xl font-bold underline">
-      <div>Hello world!</div>
+    <View className="">
+      <HomeScreen />
     </View>
   )
 }
 
 export default AppPage
-
-// import { HomeScreen } from 'app/features/home/screen'
-
-// export default HomeScreen

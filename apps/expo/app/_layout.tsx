@@ -4,6 +4,8 @@ import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native
 import { useFonts } from 'expo-font'
 import { SplashScreen, Stack } from 'expo-router'
 import { Provider } from 'app/provider'
+import { PortalHost } from '@rn-primitives/portal'
+// EXPO NOT GENERATING STYLE FROM @my/ui/global.css , so keep this global.css local to project
 import '../global.css'
 
 export const unstable_settings = {
@@ -42,6 +44,7 @@ function RootLayoutNav() {
       <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
         <Stack />
       </ThemeProvider>
+      <PortalHost />
     </Provider>
   )
 }

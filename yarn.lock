@@ -3186,9 +3186,17 @@ __metadata:
   resolution: "@my/ui@workspace:packages/ui"
   dependencies:
     "@my/config": "workspace:*"
+    "@rn-primitives/portal": "npm:^1.3.0"
+    "@rn-primitives/slot": "npm:^1.2.0"
     "@tamagui/build": "npm:^1.144.1"
     "@tamagui/toast": "npm:^1.144.1"
+    class-variance-authority: "npm:^0.7.1"
+    clsx: "npm:^2.1.1"
+    tailwind-merge: "npm:^3.4.0"
+    tailwindcss-animate: "npm:^1.0.7"
     tamagui: "npm:^1.144.1"
+  peerDependencies:
+    expo: ^54.0.31
   languageName: unknown
   linkType: soft
 
@@ -4477,6 +4485,40 @@ __metadata:
   dependencies:
     nanoid: "npm:^3.3.11"
   checksum: 10/b93375899313603a9e82f0c03689249060367bfd43776586b86063ebf338025750e537e98de54bbc3895b5cdfb87b7cdd7625d6cb0a8c73a5c3944089460b739
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/portal@npm:^1.3.0":
+  version: 1.3.0
+  resolution: "@rn-primitives/portal@npm:1.3.0"
+  dependencies:
+    zustand: "npm:^5.0.4"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10/42914a2a880c1db7313f65431b20b1ea8fd8bad9c92330c6cd77d6899611a2b5eaaa65c699360eef781f251690500ac422f27f5d5d4055d97c8e58b4958836ae
+  languageName: node
+  linkType: hard
+
+"@rn-primitives/slot@npm:^1.2.0":
+  version: 1.2.0
+  resolution: "@rn-primitives/slot@npm:1.2.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+    react-native-web: "*"
+  peerDependenciesMeta:
+    react-native:
+      optional: true
+    react-native-web:
+      optional: true
+  checksum: 10/22ac7c27c848147d7a62478203c22ac056fed8a2c8c9b8e0d312314ccdbd94bf8f20a9b65269fc3b4c185d1da9e82bab829be925fdeb6e8f770ed4c33a396b37
   languageName: node
   linkType: hard
 
@@ -8441,6 +8483,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"class-variance-authority@npm:^0.7.1":
+  version: 0.7.1
+  resolution: "class-variance-authority@npm:0.7.1"
+  dependencies:
+    clsx: "npm:^2.1.1"
+  checksum: 10/27a1face3f5ee88caa7813743461977aef5110830dc8e8960e7c9570598b37ffb8b2760b4e5d738dc827b0eb9058ddd204e9002e9af0ef39b6851f6ea9aa82c1
+  languageName: node
+  linkType: hard
+
 "clean-css@npm:^5.2.2":
   version: 5.3.3
   resolution: "clean-css@npm:5.3.3"
@@ -8512,6 +8563,13 @@ __metadata:
   version: 1.0.4
   resolution: "clone@npm:1.0.4"
   checksum: 10/d06418b7335897209e77bdd430d04f882189582e67bd1f75a04565f3f07f5b3f119a9d670c943b6697d0afb100f03b866b3b8a1f91d4d02d72c4ecf2bb64b5dd
+  languageName: node
+  linkType: hard
+
+"clsx@npm:^2.1.1":
+  version: 2.1.1
+  resolution: "clsx@npm:2.1.1"
+  checksum: 10/cdfb57fa6c7649bbff98d9028c2f0de2f91c86f551179541cf784b1cfdc1562dcb951955f46d54d930a3879931a980e32a46b598acaea274728dbe068deca919
   languageName: node
   linkType: hard
 
@@ -10072,11 +10130,12 @@ __metadata:
     react-dom: "npm:19.1.0"
     react-native: "npm:0.81.5"
     react-native-gesture-handler: "npm:~2.28.0"
-    react-native-reanimated: "npm:~3.17.4"
-    react-native-safe-area-context: "npm:5.4.0"
+    react-native-reanimated: "npm:~4.1.1"
+    react-native-safe-area-context: "npm:~5.6.0"
     react-native-screens: "npm:~4.16.0"
     react-native-svg: "npm:15.12.1"
     react-native-web: "npm:^0.21.0"
+    react-native-worklets: "npm:0.5.1"
     tailwindcss: "npm:^3.4.17"
     typescript: "npm:~5.9.2"
   languageName: unknown
@@ -14897,16 +14956,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-is-edge-to-edge@npm:1.1.7":
-  version: 1.1.7
-  resolution: "react-native-is-edge-to-edge@npm:1.1.7"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: 10/4cdf2b2fb5b131f2015c26d2cb7688b4a0c5f3c8474b1bf0ddfa9eabb0263df440c87262ae8f812a6ecab0d5310df0373bddad4b51f53dabb2ffee01e9ef0f44
-  languageName: node
-  linkType: hard
-
 "react-native-is-edge-to-edge@npm:^1.1.6":
   version: 1.1.6
   resolution: "react-native-is-edge-to-edge@npm:1.1.6"
@@ -14927,37 +14976,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-native-reanimated@npm:~3.17.4":
-  version: 3.17.5
-  resolution: "react-native-reanimated@npm:3.17.5"
+"react-native-reanimated@npm:~4.1.1":
+  version: 4.1.6
+  resolution: "react-native-reanimated@npm:4.1.6"
   dependencies:
-    "@babel/plugin-transform-arrow-functions": "npm:^7.0.0-0"
-    "@babel/plugin-transform-class-properties": "npm:^7.0.0-0"
-    "@babel/plugin-transform-classes": "npm:^7.0.0-0"
-    "@babel/plugin-transform-nullish-coalescing-operator": "npm:^7.0.0-0"
-    "@babel/plugin-transform-optional-chaining": "npm:^7.0.0-0"
-    "@babel/plugin-transform-shorthand-properties": "npm:^7.0.0-0"
-    "@babel/plugin-transform-template-literals": "npm:^7.0.0-0"
-    "@babel/plugin-transform-unicode-regex": "npm:^7.0.0-0"
-    "@babel/preset-typescript": "npm:^7.16.7"
-    convert-source-map: "npm:^2.0.0"
-    invariant: "npm:^2.2.4"
-    react-native-is-edge-to-edge: "npm:1.1.7"
+    react-native-is-edge-to-edge: "npm:^1.2.1"
+    semver: "npm:7.7.2"
   peerDependencies:
     "@babel/core": ^7.0.0-0
     react: "*"
     react-native: "*"
-  checksum: 10/63501d8ac0cb2039e60ac93bc779e946af267bb55f95cf53ed538bcf9bfca030fa5d84d5c9343dcbc4d8df0d5e9d7c58ca5647d43b17f8399dec11d812da11fc
-  languageName: node
-  linkType: hard
-
-"react-native-safe-area-context@npm:5.4.0":
-  version: 5.4.0
-  resolution: "react-native-safe-area-context@npm:5.4.0"
-  peerDependencies:
-    react: "*"
-    react-native: "*"
-  checksum: 10/3b94e0a39398f23f4cbec2e49ebfd58c4e56f1d4157fda613c3bab66924a4e71ed6665a346dd71fd04ebd40e00f606f10d5a973b2616be4bfa0a422b361a425f
+    react-native-worklets: ">=0.5.0"
+  checksum: 10/2485097dd408310daf85e55413e882446a769f3745e5a62a8a3e8344e59c896f85bb82389b2728fffd03f7b272f3c7ebb953e03a4abd201d5cf793116450e9f3
   languageName: node
   linkType: hard
 
@@ -14968,6 +14998,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 10/409a59ab249cec6c22e2df423945a7c0e991e44b7650e0c558eb01a2a1f932c97f90302e2e2ef9263f86df1bd81ed6399db022900d79f517902342dbb5e6c3bd
+  languageName: node
+  linkType: hard
+
+"react-native-safe-area-context@npm:~5.6.0":
+  version: 5.6.2
+  resolution: "react-native-safe-area-context@npm:5.6.2"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: 10/880d87ee60119321b366eef2c151ecefe14f5bc0d39cf5cfbfb167684e571d3dae2600ee19b9bc8521f5726eb285abecaa7aafb1a3b213529dafbac24703d302
   languageName: node
   linkType: hard
 
@@ -15034,6 +15074,29 @@ __metadata:
     react: ^18.0.0 || ^19.0.0
     react-dom: ^18.0.0 || ^19.0.0
   checksum: 10/32f785541660c25326d6ef863afb7b07259b884c2faf083b2d9ea44677bf2423a5b805478f83531be7c9b0260d98997def720000c033d178fd55fecfe6336211
+  languageName: node
+  linkType: hard
+
+"react-native-worklets@npm:0.5.1":
+  version: 0.5.1
+  resolution: "react-native-worklets@npm:0.5.1"
+  dependencies:
+    "@babel/plugin-transform-arrow-functions": "npm:^7.0.0-0"
+    "@babel/plugin-transform-class-properties": "npm:^7.0.0-0"
+    "@babel/plugin-transform-classes": "npm:^7.0.0-0"
+    "@babel/plugin-transform-nullish-coalescing-operator": "npm:^7.0.0-0"
+    "@babel/plugin-transform-optional-chaining": "npm:^7.0.0-0"
+    "@babel/plugin-transform-shorthand-properties": "npm:^7.0.0-0"
+    "@babel/plugin-transform-template-literals": "npm:^7.0.0-0"
+    "@babel/plugin-transform-unicode-regex": "npm:^7.0.0-0"
+    "@babel/preset-typescript": "npm:^7.16.7"
+    convert-source-map: "npm:^2.0.0"
+    semver: "npm:7.7.2"
+  peerDependencies:
+    "@babel/core": ^7.0.0-0
+    react: "*"
+    react-native: "*"
+  checksum: 10/39e70b64560cc4b031ac329bfbd0686b744b6940bbe1d1768a227bb9e142a0e2bad5ef16752003e83374db49d8d6396c72236b9c279e1465a7177f887ae12d48
   languageName: node
   linkType: hard
 
@@ -15711,6 +15774,15 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10/985dec0d372370229a262c737063860fabd4a1c730662c1ea3200a2f649117761a42184c96df62a0e885e76fbd5dace41087d6c1ac0351b13c0df5d6bcb1b5ac
+  languageName: node
+  linkType: hard
+
+"semver@npm:7.7.2":
+  version: 7.7.2
+  resolution: "semver@npm:7.7.2"
+  bin:
+    semver: bin/semver.js
+  checksum: 10/7a24cffcaa13f53c09ce55e05efe25cd41328730b2308678624f8b9f5fc3093fc4d189f47950f0b811ff8f3c3039c24a2c36717ba7961615c682045bf03e1dda
   languageName: node
   linkType: hard
 
@@ -16532,6 +16604,22 @@ __metadata:
     string-width: "npm:^4.2.3"
     strip-ansi: "npm:^6.0.1"
   checksum: 10/976da6d89841566e39628d1ba107ffab126964c9390a0a877a7c54ebb08820bf388d28fe9f8dcf354b538f19634a572a506c38a3762081640013a149cc862af9
+  languageName: node
+  linkType: hard
+
+"tailwind-merge@npm:^3.4.0":
+  version: 3.4.0
+  resolution: "tailwind-merge@npm:3.4.0"
+  checksum: 10/d8caeb40ee3ec0eae2996f8a86d77c82a1751fc9c61a31d6153b4252cb734deaf98d351205aff5c204beee7b73497add8492411e75187acb8506b4d981e4ccc2
+  languageName: node
+  linkType: hard
+
+"tailwindcss-animate@npm:^1.0.7":
+  version: 1.0.7
+  resolution: "tailwindcss-animate@npm:1.0.7"
+  peerDependencies:
+    tailwindcss: "*"
+  checksum: 10/ef176fbb0bf9dca84178b35b6a9615cd756358ea80be9c575456d12ecd7f3c431e9e571915c7df72959dc798a730959e9a4739d59eab55d8cc6db390870ff0d2
   languageName: node
   linkType: hard
 
@@ -18050,5 +18138,26 @@ __metadata:
   version: 1.1.1
   resolution: "yocto-queue@npm:1.1.1"
   checksum: 10/f2e05b767ed3141e6372a80af9caa4715d60969227f38b1a4370d60bffe153c9c5b33a862905609afc9b375ec57cd40999810d20e5e10229a204e8bde7ef255c
+  languageName: node
+  linkType: hard
+
+"zustand@npm:^5.0.4":
+  version: 5.0.9
+  resolution: "zustand@npm:5.0.9"
+  peerDependencies:
+    "@types/react": ">=18.0.0"
+    immer: ">=9.0.6"
+    react: ">=18.0.0"
+    use-sync-external-store: ">=1.2.0"
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+    immer:
+      optional: true
+    react:
+      optional: true
+    use-sync-external-store:
+      optional: true
+  checksum: 10/af24d8cc07383b85bf713d1be55a788d4559c5b20980852095c2352bfd0a3bc64d0ba1f08f2f440d5c298ea2856d34d67e5e74fafe29d8796e8b4a09781ca86c
   languageName: node
   linkType: hard

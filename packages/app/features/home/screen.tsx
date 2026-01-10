@@ -1,18 +1,9 @@
 'use client'
 
-import {
-  Anchor,
-  Button,
-  H1,
-  Paragraph,
-  Separator,
-  Sheet,
-  useToastController,
-  XStack,
-  YStack,
-} from '@my/ui'
+import { Anchor, Button, Paragraph, Sheet, useToastController, XStack } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import { useState } from 'react'
+import { Text, View } from 'react-native'
 import { useLink } from 'solito/navigation'
 
 export function HomeScreen() {
@@ -21,25 +12,10 @@ export function HomeScreen() {
   })
 
   return (
-    <YStack flex={1} justify="center" items="center" gap="$8" p="$4" bg="$background">
-      <YStack gap="$4">
-        <H1 text="center" color="$color12">
-          Welcome to Tamagui. Updated By @jayparmar11
-        </H1>
-        <Paragraph color="$color10" text="center">
-          Here's a basic starter to show navigating from one screen to another.
-        </Paragraph>
-        <Separator />
-        <Paragraph text="center">
-          This screen uses the same code on Next.js and React Native.
-        </Paragraph>
-        <Separator />
-      </YStack>
-
-      <Button {...linkProps}>Link to user</Button>
-
-      <SheetDemo />
-    </YStack>
+    <View className="bg-red-400">
+      <Text className="text-blue-500">Hello World!</Text>
+      <Button className="text-blue-500 bg-red-400">THIS IS BUTTON</Button>
+    </View>
   )
 }
 
