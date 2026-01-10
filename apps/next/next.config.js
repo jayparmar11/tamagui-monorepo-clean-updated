@@ -4,6 +4,8 @@ module.exports = {
     ignoreBuildErrors: true,
   },
   transpilePackages: [
+    'nativewind',
+    'react-native-css-interop',
     'solito',
     'react-native-web',
     '@tamagui/react-native-svg',

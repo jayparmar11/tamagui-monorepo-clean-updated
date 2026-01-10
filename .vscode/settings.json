@@ -37,4 +37,9 @@
   "cSpell.words": [
     "Tamagui"
   ],
+  "tailwindCSS.classAttributes": [
+    "class",
+    "className",
+    "headerClassName"
+  ]
 }

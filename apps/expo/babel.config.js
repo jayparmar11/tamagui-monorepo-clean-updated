@@ -1,7 +1,10 @@
 module.exports = (api) => {
   api.cache(true)
   return {
-    presets: [['babel-preset-expo', { jsxRuntime: 'automatic' }]],
+    presets: [
+      'nativewind/babel',
+      ['babel-preset-expo', { jsxRuntime: 'automatic', jsxImportSource: 'nativewind' }],
+    ],
     plugins: [
       [
         require.resolve('babel-plugin-module-resolver'),
