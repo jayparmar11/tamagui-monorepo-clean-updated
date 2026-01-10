@@ -10,6 +10,10 @@ This monorepo is a starter for an Expo + Next.js + Tamagui + Solito app.
 
 Many thanks to [@FernandoTheRojo](https://twitter.com/fernandotherojo) for the Solito starter monorepo which this was forked from. Check out his [talk about using expo + next together at Next.js Conf 2021](https://www.youtube.com/watch?v=0lnbdRweJtA).
 
+## 🔼 Updated Version
+
+Thank [@JayParmar11](https://github.com/jayparmar11) for upgrading version.
+
 ## 📦 Included packages
 
 - [Tamagui](https://tamagui.dev) 🪄

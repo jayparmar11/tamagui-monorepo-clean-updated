@@ -17,7 +17,7 @@
     "watch": "tamagui-build --skip-types --watch"
   },
   "dependencies": {
-    "@my/config": "0.0.1",
+    "@my/config": "workspace:*",
     "@tamagui/toast": "^1.144.1",
     "tamagui": "^1.144.1"
   },

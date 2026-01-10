@@ -7,53 +7,26 @@ import {
   Paragraph,
   Separator,
   Sheet,
-  SwitchThemeButton,
   useToastController,
   XStack,
   YStack,
 } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
 import { useState } from 'react'
-import { Platform } from 'react-native'
 import { useLink } from 'solito/navigation'
 
 export function HomeScreen() {
   const linkProps = useLink({
-    href: '/user/nate',
+    href: '/user/Jay_Parmar',
   })
 
   return (
-    <YStack
-      flex={1}
-      justify="center"
-      items="center"
-      gap="$8"
-      p="$4"
-      bg="$background"
-    >
-      <XStack
-        position="absolute"
-        width="100%"
-        t="$6"
-        gap="$6"
-        justify="center"
-        flexWrap="wrap"
-        $sm={{ position: 'relative', t: 0 }}
-      >
-        {Platform.OS === 'web' && <SwitchThemeButton />}
-      </XStack>
-
+    <YStack flex={1} justify="center" items="center" gap="$8" p="$4" bg="$background">
       <YStack gap="$4">
-        <H1
-          text="center"
-          color="$color12"
-        >
-          Welcome to Tamagui.
+        <H1 text="center" color="$color12">
+          Welcome to Tamagui. Updated By @jayparmar11
         </H1>
-        <Paragraph
-          color="$color10"
-          text="center"
-        >
+        <Paragraph color="$color10" text="center">
           Here's a basic starter to show navigating from one screen to another.
         </Paragraph>
         <Separator />
@@ -101,24 +74,15 @@ function SheetDemo() {
           exitStyle={{ opacity: 0 }}
         />
         <Sheet.Handle bg="$color8" />
-        <Sheet.Frame
-          items="center"
-          justify="center"
-          gap="$10"
-          bg="$color2"
-        >
+        <Sheet.Frame items="center" justify="center" gap="$10" bg="$color2">
           <XStack gap="$2">
             <Paragraph text="center">Made by</Paragraph>
-            <Anchor
-              color="$blue10"
-              href="https://twitter.com/natebirdman"
-              target="_blank"
-            >
-              @natebirdman,
+            <Anchor color="$blue10" href="https://github.com/jayparmar11" target="_blank">
+              @jayparmar,
             </Anchor>
             <Anchor
               color="$blue10"
-              href="https://github.com/tamagui/tamagui"
+              href="https://github.com/jayparmar11/tamagui-monorepo-clean-updated"
               target="_blank"
               rel="noreferrer"
             >

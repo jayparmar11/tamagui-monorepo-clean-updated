@@ -1,14 +1,6 @@
+import { TamaguiProvider, type TamaguiProviderProps, ToastProvider, isWeb } from '@my/ui'
+import { config } from '@my/config'
 import { useColorScheme } from 'react-native'
-import {
-  CustomToast,
-  TamaguiProvider,
-  type TamaguiProviderProps,
-  ToastProvider,
-  config,
-  isWeb,
-} from '@my/ui'
-import { ToastViewport } from './ToastViewport'
-
 export function Provider({
   children,
   defaultTheme = 'light',
@@ -18,19 +10,9 @@ export function Provider({
   const theme = defaultTheme || (colorScheme === 'dark' ? 'dark' : 'light')
 
   return (
-    <TamaguiProvider
-      config={config}
-      defaultTheme={theme}
-      {...rest}
-    >
-      <ToastProvider
-        swipeDirection="horizontal"
-        duration={6000}
-        native={isWeb ? [] : ['mobile']}
-      >
+    <TamaguiProvider config={config} defaultTheme={theme} {...rest}>
+      <ToastProvider swipeDirection="horizontal" duration={6000} native={isWeb ? [] : ['mobile']}>
         {children}
-        <CustomToast />
-        <ToastViewport />
       </ToastProvider>
     </TamaguiProvider>
   )

@@ -9,8 +9,6 @@ module.exports = {
     '@tamagui/react-native-svg',
     '@tamagui/next-theme',
     '@tamagui/lucide-icons',
-    'expo-linking',
-    'expo-constants',
     'expo-modules-core',
   ],
   experimental: {

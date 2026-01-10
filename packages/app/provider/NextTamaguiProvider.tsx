@@ -8,7 +8,7 @@ import '@tamagui/polyfill-dev'
 import type { ReactNode } from 'react'
 import { useServerInsertedHTML } from 'next/navigation'
 import { NextThemeProvider, useRootTheme } from '@tamagui/next-theme'
-import { config } from '@my/ui'
+import { config } from '@my/config'
 import { Provider } from 'app/provider'
 import { StyleSheet } from 'react-native'
 
@@ -20,14 +20,8 @@ export const NextTamaguiProvider = ({ children }: { children: ReactNode }) => {
     const rnwStyle = StyleSheet.getSheet()
     return (
       <>
-        <link
-          rel="stylesheet"
-          href="/tamagui.css"
-        />
-        <style
-          dangerouslySetInnerHTML={{ __html: rnwStyle.textContent }}
-          id={rnwStyle.id}
-        />
+        <link rel="stylesheet" href="/tamagui.css" />
+        <style dangerouslySetInnerHTML={{ __html: rnwStyle.textContent }} id={rnwStyle.id} />
         <style
           dangerouslySetInnerHTML={{
             // the first time this runs you'll get the full CSS including all themes
@@ -62,10 +56,7 @@ export const NextTamaguiProvider = ({ children }: { children: ReactNode }) => {
         setTheme(next as any)
       }}
     >
-      <Provider
-        disableRootThemeClass
-        defaultTheme={theme || 'light'}
-      >
+      <Provider disableRootThemeClass defaultTheme={theme || 'light'}>
         {children}
       </Provider>
     </NextThemeProvider>
