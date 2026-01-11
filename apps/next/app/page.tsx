@@ -7,6 +7,10 @@ function AppPage() {
   return (
     <View className="">
       <HomeScreen />
+      {/* Below is SAME CODE FROM above HomeScreen */}
+      <View className="bg-red-400">
+        <Text className="!text-blue-500">Hello World!</Text>
+      </View>
     </View>
   )
 }

@@ -14,7 +14,6 @@ export function HomeScreen() {
   return (
     <View className="bg-red-400">
       <Text className="text-blue-500">Hello World!</Text>
-      <Button className="text-blue-500 bg-red-400">THIS IS BUTTON</Button>
     </View>
   )
 }
